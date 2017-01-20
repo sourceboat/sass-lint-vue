@@ -21,3 +21,11 @@ $ sass-lint-vue [options] <file ...>
 
 * `-h, --help`: output usage information
 * `-V, --version`: output the version number
+
+## Example
+
+The following example scans the `assets` directory for `.vue` files and outputs lint errors in `<style>` tags with the attribute `lang="scss"` set. 
+
+```
+$ sass-lint-vue assets
+```
