@@ -7,6 +7,11 @@
 
 Command line tool to lint [Sass](https://github.com/sass/sass) styles in [Vue single file components](https://vuejs.org/v2/guide/single-file-components.html). It uses [sass-lint](https://github.com/sasstools/sass-lint) under the hood.
 
+## Features
+
+* Add a `.sass-lint.yml` to specify your [configuration](https://github.com/sasstools/sass-lint#configuring).
+* Disable specific rules or all rules [via source](https://github.com/sasstools/sass-lint#disabling-linters-via-source).
+
 ## Installation
 
 ```bash
