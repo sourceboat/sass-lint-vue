@@ -34,8 +34,20 @@ sass-lint-vue assets
 
 ## Development
 
-Execute the script in a docker container to lint the `Component.vue` via the following command.
+Build the docker container via
+
+```bash
+docker build . -t sass-lint-vue.
+```
+
+Lint the `Component.vue` file in the docker container via:
 
 ```bash
 docker run --rm -v (pwd):/app sass-lint-vue ./app/bin/sass-lint-vue ./app/test/Component.vue
+```
+
+Access the container via:
+
+```bash
+docker run -it --rm -v (pwd):/app sass-lint-vue bash
 ```
