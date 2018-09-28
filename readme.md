@@ -9,14 +9,14 @@ Command line tool to lint [Sass](https://github.com/sass/sass) styles in [Vue si
 
 ## Installation
 
-```
-$ npm install sass-lint-vue
+```bash
+npm install sass-lint-vue
 ```
 
 ## Usage
 
-```
-$ sass-lint-vue [options] <file ...>
+```bash
+sass-lint-vue [options] <file ...>
 ```
 
 ### Options
@@ -26,8 +26,16 @@ $ sass-lint-vue [options] <file ...>
 
 ## Example
 
-The following example scans the `assets` directory for `.vue` files and outputs lint errors in `<style>` tags with the attribute `lang="scss"` set. 
+The following example scans the `assets` directory for `.vue` files and outputs lint errors in `<style>` tags with the attribute `lang="scss"` set.
 
+```bash
+sass-lint-vue assets
 ```
-$ sass-lint-vue assets
+
+## Development
+
+Execute the script in a docker container to lint the `Component.vue` via the following command.
+
+```bash
+docker run --rm -v (pwd):/app sass-lint-vue ./app/bin/sass-lint-vue ./app/test/Component.vue
 ```
