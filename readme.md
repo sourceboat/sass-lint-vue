@@ -7,16 +7,21 @@
 
 Command line tool to lint [Sass](https://github.com/sass/sass) styles in [Vue single file components](https://vuejs.org/v2/guide/single-file-components.html). It uses [sass-lint](https://github.com/sasstools/sass-lint) under the hood.
 
+## Features
+
+* Add a `.sass-lint.yml` to specify your [configuration](https://github.com/sasstools/sass-lint#configuring).
+* Disable specific rules or all rules [via source](https://github.com/sasstools/sass-lint#disabling-linters-via-source).
+
 ## Installation
 
-```
-$ npm install sass-lint-vue
+```bash
+npm install sass-lint-vue
 ```
 
 ## Usage
 
-```
-$ sass-lint-vue [options] <file ...>
+```bash
+sass-lint-vue [options] <file ...>
 ```
 
 ### Options
@@ -26,8 +31,28 @@ $ sass-lint-vue [options] <file ...>
 
 ## Example
 
-The following example scans the `assets` directory for `.vue` files and outputs lint errors in `<style>` tags with the attribute `lang="scss"` set. 
+The following example scans the `assets` directory for `.vue` files and outputs lint errors in `<style>` tags with the attribute `lang="scss"` set.
 
+```bash
+sass-lint-vue assets
 ```
-$ sass-lint-vue assets
+
+## Development
+
+Build the docker container via
+
+```bash
+docker build . -t sass-lint-vue.
+```
+
+Lint the `Component.vue` file in the docker container via:
+
+```bash
+docker run --rm -v (pwd):/app sass-lint-vue ./app/bin/sass-lint-vue ./app/test/Component.vue
+```
+
+Access the container via:
+
+```bash
+docker run -it --rm -v (pwd):/app sass-lint-vue bash
 ```
