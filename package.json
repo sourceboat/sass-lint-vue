@@ -43,6 +43,6 @@
     "walk": "^2.3.14"
   },
   "devDependencies": {
-    "husky": "^1.0.1"
+    "husky": "^2.4.1"
   }
 }
