@@ -39,20 +39,27 @@ sass-lint-vue assets
 
 ## Development
 
-Build the docker container via
+Build the docker container via:
 
 ```bash
-docker build . -t sass-lint-vue.
+$ docker build . -t sass-lint-vue
 ```
 
 Lint the `Component.vue` file in the docker container via:
 
 ```bash
-docker run --rm -v (pwd):/app sass-lint-vue ./app/bin/sass-lint-vue ./app/test/Component.vue
+$ docker run --rm -tv $(pwd)/test:/app/test sass-lint-vue test
 ```
 
 Access the container via:
 
 ```bash
-docker run -it --rm -v (pwd):/app sass-lint-vue bash
+$ docker run -it --rm -v $(pwd)/test:/app/test --entrypoint bash sass-lint-vue
+```
+
+Use docker compose to work on the files:
+
+```
+$ docker-compose up
+$ docker-compose exec app bash
 ```
