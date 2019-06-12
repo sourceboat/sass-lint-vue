@@ -31,7 +31,7 @@ sass-lint-vue [options] <file ...>
 
 ## Example
 
-The following example scans the `assets` directory for `.vue` files and outputs lint errors in `<style>` tags with the attribute `lang="scss"` set.
+The following example scans the `assets` directory for `.vue` files and outputs lint errors in `<style>` tags with the attribute `lang="scss"` or `lang="sass"` set.
 
 ```bash
 sass-lint-vue assets
