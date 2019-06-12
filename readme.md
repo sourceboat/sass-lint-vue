@@ -39,10 +39,10 @@ sass-lint-vue assets
 
 ## Development
 
-Build the docker container via
+Build the docker container via:
 
 ```bash
-docker build . -t sass-lint-vue.
+docker build . -t sass-lint-vue
 ```
 
 Lint the `Component.vue` file in the docker container via:
