@@ -1,10 +1,10 @@
-FROM node:8
+FROM node:10
 
 WORKDIR /app
 
 # Install dependencies
-COPY package*.json .
-RUN npm install
+COPY package.json yarn.* ./
+RUN yarn install
 
 # Copy our code on top
 COPY lib ./lib
