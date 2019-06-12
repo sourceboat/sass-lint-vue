@@ -21,7 +21,7 @@ npm install sass-lint-vue
 ## Usage
 
 ```bash
-sass-lint-vue [options] <file ...>
+sass-lint-vue [options] <paths|file path ...>
 ```
 
 ### Options
