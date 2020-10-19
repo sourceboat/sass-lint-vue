@@ -1,3 +1,5 @@
+:warning: **Deprecated:** This project is not actively maintained anymore. Use it at your own risk. The underlying library [sass-lint](https://github.com/sasstools/sass-lint) is  unmaintained. We recommend using [stylelint](https://vue-loader.vuejs.org/guide/linting.html#stylelint) to lint your single file components directly.
+
 # sass-lint-vue
 
 [![npm](https://img.shields.io/npm/v/sass-lint-vue.svg?style=flat-square)](https://www.npmjs.com/package/sass-lint-vue)
